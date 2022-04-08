@@ -157,7 +157,7 @@ git 需要填写用户名喝邮箱作为一个标志
 
 github是一个git项目托管网站，主要提供基于git版本托管服务
 
-<img src="C:\Users\Cver\AppData\Roaming\Typora\typora-user-images\image-20220407214351499.png" alt="image-20220407214351499" style="zoom: 33%;" />
+![](.\image-20220408100802336.png)
 
 ## 1.Github上传代码操作
 
@@ -218,3 +218,56 @@ github是一个git项目托管网站，主要提供基于git版本托管服务
 > git commit
 >
 > git push origin master 会出现问题 授权
+
+## 3.自己同步更新代码
+
+> git pull origin master
+
+## 4.协同冲突
+
+在上传或者同步代码时候 由于你和他人都修改了同一文件的同一位置代码 版本管理工具无法判断究竟以谁为准 这就会报告冲突 需要程序员手动结局
+
+> push会报错 必须先同步再修改
+>
+> 同步的时候 会出现冲突------------->找到文件 进行修改
+>
+> git add
+>
+> git commit
+>
+> 然后push
+
+## 5.第三方协作
+
+有一个fork 第三放fork出来 在自己就有一个库
+
+生成一个从库 会发送一个同步请求 需要同意
+
+第三方修改文件之后 查看CODE 就会有一个new pull request---->提交
+
+管理员就会收到一封邮件
+
+
+
+# Gitab
+
+> 自架私服版的github
+>
+> 使用和github一样	局域网中
+
+# IDEA整合git
+
+- 
+
+# 几个问题
+
+> $ git push origin master
+> fatal: unable to access 'https://github.com/tao-source/C.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+
+取消git代理 使用自己的代理
+
+//取消http代理
+git config --global --unset http.proxy
+//取消https代理 
+git config --global --unset https.proxy
+
